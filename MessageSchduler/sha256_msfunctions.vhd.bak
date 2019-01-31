@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.sha256_types.all;
+use work.sha256_constants.all;
+
+package sha256_functions is
+
+	-- Small sigma functions:
+	function s0(x : std_logic_vector) return std_logic_vector;
+	function s1(x : std_logic_vector) return std_logic_vector;
+
+end package sha256_functions;
+
+package body sha256_functions is
+
+	function s0(x : std_logic_vector) return std_logic_vector is
+	begin
+		return std_logic_vector(rotate_right(unsigned(x), 7) xor rotate_right(unsigned(x), 18) xor shift_right(unsigned(x), 3));
+	end function s0;
+
+	function s1(x : std_logic_vector) return std_logic_vector is
+	begin
+		return std_logic_vector(rotate_right(unsigned(x), 17) xor rotate_right(unsigned(x), 19) xor shift_right(unsigned(x), 10));
+	end function s1;
+
+end package body sha256_functions;

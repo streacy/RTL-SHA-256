@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+use work.sha256_datatypes.all;
+use work.sha256_msfunctions.all;
+
+entity MessageScheduler is
+port(
+		clock : in std_logic;
+		M		: in std_logic_vector(511 downto 0); 
+		W		: out std_logic_vector(0 downto 63);
+
+)
+
+architecture behaviour of MessageScheduler is
+	signal temp 	: std_logic_vector(511 downto 0); 
+	signal schedule : padded_message_block_array;
+	signal j 		  : integer range 0 to 63;
+begin	
+	temp <= M;
+	process(clk)
+		variable j : integer:=0;
+		begin	
+			if(rising_edge(clk) and clk='1') then
+				if j < 16 then						 -- If j < 16 then the message scheduler is the padded input message
+					schedule(j) <= temp(31 downto 0);
+					shift_right(unsigned(temp),32);
+					j := + 1;
+				else 									-- Else, W_j = s1(W[j]-2) + W[j]-7 + s0(W[j]-15) + W[j]-16
+					schedule(j) <= std_logic_vector(unsigned(s1(schedule(j - 2))) + unsigned(schedule(j - 7)) + unsigned(s0(schedule(j - 15))) + unsigned(schedule(j - 16)))
+					j := j + 1;
+				end if;
+		end if;	
+	end process;
+end behaviour;
