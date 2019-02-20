@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Feb 14 17:54:19 2019
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Revision Name : CompressionFunction
+Top-level Entity Name : CompressionFunction
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 7,372 / 33,216 ( 22 % )
+    Total combinational functions : 6,020 / 33,216 ( 18 % )
+    Dedicated logic registers : 3,016 / 33,216 ( 9 % )
+Total registers : 3016
+Total pins : 258 / 475 ( 54 % )
+Total virtual pins : 0
+Total memory bits : 0 / 483,840 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
