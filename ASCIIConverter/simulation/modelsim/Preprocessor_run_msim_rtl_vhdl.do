@@ -5,5 +5,5 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {/home/student2/mnithiya/Desktop/CAPSTONE/ASCIIConverter/Preprocessor.vhd}
+vcom -93 -work work {C:/Users/user/Desktop/Capstone/RTL-SHA-256/ASCIIConverter/Preprocessor.vhd}
 

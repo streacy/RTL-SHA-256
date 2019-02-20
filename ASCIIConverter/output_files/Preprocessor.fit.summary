@@ -1,16 +1,14 @@
-Fitter Status : Successful - Mon Feb 11 22:09:08 2019
+Fitter Status : Failed - Fri Feb 15 16:12:23 2019
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : Preprocessor
 Top-level Entity Name : Preprocessor
 Family : Cyclone IV E
-Device : EP4CE30F29C6
-Timing Models : Final
-Total logic elements : 106 / 28,848 ( < 1 % )
-    Total combinational functions : 2 / 28,848 ( < 1 % )
-    Dedicated logic registers : 106 / 28,848 ( < 1 % )
-Total registers : 106
-Total pins : 323 / 533 ( 61 % )
+Total logic elements : 87
+    Total combinational functions : 80
+    Dedicated logic registers : 41
+Total registers : 41
+Total pins : 581
 Total virtual pins : 0
-Total memory bits : 0 / 608,256 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
