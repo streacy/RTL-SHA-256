@@ -17,13 +17,14 @@ entity PaddedMessageRegFile is
            wen : in  STD_LOGIC;
            addr : in  STD_LOGIC_VECTOR (3 downto 0);
            dataIn : in  STD_LOGIC_VECTOR (31 downto 0);
-           dataOut : out  STD_LOGIC_VECTOR (31 downto 0));
+           dataOut : out  STD_LOGIC_VECTOR (31 downto 0)
+			  );
 end PaddedMessageRegFile;
 
 architecture Behavioral of PaddedMessageRegFile is
 	type registerFile is array(0 to 15) of std_logic_vector(31 downto 0);
 	signal registers : registerFile := (
-			x"61800000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000",
+			x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000",
 			x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000001"
 		);
 	

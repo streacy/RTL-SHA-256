@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Preprocessor
-Mon Feb 18 22:11:00 2019
+Tue Feb 26 14:45:35 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Feb 18 22:11:00 2019 ;
+; EDA Netlist Writer Status ; Successful - Tue Feb 26 14:45:35 2019 ;
 ; Revision Name             ; Preprocessor                          ;
-; Top-level Entity Name     ; Preprocessor                          ;
+; Top-level Entity Name     ; Preprocessor1                         ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -95,16 +95,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Altera and sold by Altera or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Mon Feb 18 22:10:58 2019
+    Info: Processing started: Tue Feb 26 14:45:31 2019
 Info: Command: quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/user/Desktop/Capstone/RTL-SHA-256/ASCIIConverter/simulation/qsim/ Preprocessor -c Preprocessor
 Info (119004): Automatically selected device EP4CE115F23C7 for design Preprocessor
 Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Preprocessor.vo in folder "C:/Users/user/Desktop/Capstone/RTL-SHA-256/ASCIIConverter/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 729 megabytes
-    Info: Processing ended: Mon Feb 18 22:11:00 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 725 megabytes
+    Info: Processing ended: Tue Feb 26 14:45:35 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -19,15 +19,15 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/18/2019 22:10:55"
+// Generated on "02/26/2019 14:45:29"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          Preprocessor
+// Verilog Test Bench (with test vectors) for design :                          Preprocessor1
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module Preprocessor_vlg_vec_tst();
+module Preprocessor1_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
@@ -35,26 +35,50 @@ reg ready;
 reg readyBlock;
 reg reset;
 // wires                                               
-wire [31:0] k;
 wire lastBlock;
 wire [0:511] messageBit;
-wire [31:0] n;
-wire [0:1023] outBit;
-wire [31:0] z;
+wire [31:0] sub0;
+wire [31:0] sub1;
+wire [31:0] sub2;
+wire [31:0] sub3;
+wire [31:0] sub4;
+wire [31:0] sub5;
+wire [31:0] sub6;
+wire [31:0] sub7;
+wire [31:0] sub8;
+wire [31:0] sub9;
+wire [31:0] sub10;
+wire [31:0] sub11;
+wire [31:0] sub12;
+wire [31:0] sub13;
+wire [31:0] sub14;
+wire [31:0] sub15;
 
 // assign statements (if any)                          
-Preprocessor i1 (
+Preprocessor1 i1 (
 // port map - connection between master ports and signals/registers   
 	.clk(clk),
-	.k(k),
 	.lastBlock(lastBlock),
 	.messageBit(messageBit),
-	.n(n),
-	.outBit(outBit),
 	.ready(ready),
 	.readyBlock(readyBlock),
 	.reset(reset),
-	.z(z)
+	.sub0(sub0),
+	.sub1(sub1),
+	.sub2(sub2),
+	.sub3(sub3),
+	.sub4(sub4),
+	.sub5(sub5),
+	.sub6(sub6),
+	.sub7(sub7),
+	.sub8(sub8),
+	.sub9(sub9),
+	.sub10(sub10),
+	.sub11(sub11),
+	.sub12(sub12),
+	.sub13(sub13),
+	.sub14(sub14),
+	.sub15(sub15)
 );
 initial 
 begin 
