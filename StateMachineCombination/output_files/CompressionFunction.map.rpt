@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CompressionFunction
-Wed Feb 20 11:23:40 2019
+Tue Feb 26 19:41:05 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -46,16 +46,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 20 11:23:39 2019            ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 26 19:41:04 2019            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; CompressionFunction                              ;
 ; Top-level Entity Name              ; CompressionFunction                              ;
 ; Family                             ; Cyclone II                                       ;
-; Total logic elements               ; 8,411                                            ;
-;     Total combinational functions  ; 6,025                                            ;
-;     Dedicated logic registers      ; 3,027                                            ;
-; Total registers                    ; 3027                                             ;
-; Total pins                         ; 457                                              ;
+; Total logic elements               ; 8,667                                            ;
+;     Total combinational functions  ; 6,409                                            ;
+;     Dedicated logic registers      ; 3,049                                            ;
+; Total registers                    ; 3049                                             ;
+; Total pins                         ; 464                                              ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -165,17 +165,17 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
-; sha256_msfunctions.vhd           ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Demofile/sha256_msfunctions.vhd   ;         ;
-; sha256_datatypes.vhd             ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Demofile/sha256_datatypes.vhd     ;         ;
-; sha256_constants.vhd             ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Demofile/sha256_constants.vhd     ;         ;
-; CompressionFunction.vhd          ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Demofile/CompressionFunction.vhd  ;         ;
-; PaddedMessageRegFile.vhd         ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Demofile/PaddedMessageRegFile.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                         ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
+; sha256_msfunctions.vhd           ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/sha256_msfunctions.vhd   ;         ;
+; sha256_datatypes.vhd             ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/sha256_datatypes.vhd     ;         ;
+; sha256_constants.vhd             ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/sha256_constants.vhd     ;         ;
+; CompressionFunction.vhd          ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/CompressionFunction.vhd  ;         ;
+; PaddedMessageRegFile.vhd         ; yes             ; User VHDL File  ; C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/PaddedMessageRegFile.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -183,28 +183,28 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 8,411 ;
+; Estimated Total logic elements              ; 8,667 ;
 ;                                             ;       ;
-; Total combinational functions               ; 6025  ;
+; Total combinational functions               ; 6409  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 4099  ;
-;     -- 3 input functions                    ; 1685  ;
-;     -- <=2 input functions                  ; 241   ;
+;     -- 4 input functions                    ; 4069  ;
+;     -- 3 input functions                    ; 1893  ;
+;     -- <=2 input functions                  ; 447   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 5468  ;
-;     -- arithmetic mode                      ; 557   ;
+;     -- normal mode                          ; 5840  ;
+;     -- arithmetic mode                      ; 569   ;
 ;                                             ;       ;
-; Total registers                             ; 3027  ;
-;     -- Dedicated logic registers            ; 3027  ;
+; Total registers                             ; 3049  ;
+;     -- Dedicated logic registers            ; 3049  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 457   ;
+; I/O pins                                    ; 464   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 3027  ;
-; Total fan-out                               ; 31310 ;
-; Average fan-out                             ; 3.29  ;
+; Maximum fan-out                             ; 3049  ;
+; Total fan-out                               ; 32034 ;
+; Average fan-out                             ; 3.23  ;
 +---------------------------------------------+-------+
 
 
@@ -213,7 +213,7 @@ applicable agreement for further details.
 +-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
 +-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; |CompressionFunction                    ; 6025 (6022)       ; 3027 (3027)  ; 0           ; 0            ; 0       ; 0         ; 457  ; 0            ; |CompressionFunction                                    ; work         ;
+; |CompressionFunction                    ; 6409 (6406)       ; 3049 (3049)  ; 0           ; 0            ; 0       ; 0         ; 464  ; 0            ; |CompressionFunction                                    ; work         ;
 ;    |PaddedMessageRegFile:paddedmessage| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompressionFunction|PaddedMessageRegFile:paddedmessage ; work         ;
 +-----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -237,34 +237,26 @@ Encoding Type:  One-Hot
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
+; outmem[0]~reg0                         ; Stuck at GND due to stuck port data_in ;
 ; outmem[1]~reg0                         ; Stuck at GND due to stuck port data_in ;
 ; outmem[2]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; outmem[3]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; outmem[4]~reg0                         ; Stuck at GND due to stuck port data_in ;
 ; outmem[5]~reg0                         ; Stuck at GND due to stuck port data_in ;
 ; outmem[6]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; outmem[7]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; outmem[8]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; outmem[9]~reg0                         ; Stuck at GND due to stuck port data_in ;
 ; outmem[10]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[11]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[12]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; outmem[13]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; outmem[14]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[15]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[16]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; outmem[17]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[18]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[19]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[20]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; outmem[21]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; outmem[22]~reg0                        ; Stuck at GND due to stuck port data_in ;
+; outmem[23]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[25]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[26]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[27]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[28]~reg0                        ; Stuck at GND due to stuck port data_in ;
 ; outmem[31]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 27 ;                                        ;
+; Total Number of Removed Registers = 19 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -273,12 +265,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3027  ;
+; Total registers                              ; 3049  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3018  ;
+; Number of registers using Clock Enable       ; 3039  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -288,107 +280,107 @@ Encoding Type:  One-Hot
 +-------------------------------------------+---------+
 ; Inverted Register                         ; Fan out ;
 +-------------------------------------------+---------+
-; h[0]                                      ; 2       ;
-; h[3]                                      ; 2       ;
-; h[4]                                      ; 2       ;
-; h[8]                                      ; 2       ;
-; h[10]                                     ; 2       ;
-; h[11]                                     ; 2       ;
-; h[14]                                     ; 2       ;
-; h[15]                                     ; 2       ;
-; h[21]                                     ; 2       ;
-; h[22]                                     ; 2       ;
-; h[23]                                     ; 2       ;
-; h[24]                                     ; 2       ;
-; h[25]                                     ; 2       ;
-; h[27]                                     ; 2       ;
-; h[28]                                     ; 2       ;
-; h[30]                                     ; 2       ;
-; g[0]                                      ; 3       ;
-; g[1]                                      ; 3       ;
-; g[3]                                      ; 3       ;
-; g[5]                                      ; 3       ;
-; g[7]                                      ; 3       ;
-; g[8]                                      ; 3       ;
-; g[11]                                     ; 3       ;
-; g[12]                                     ; 3       ;
-; g[14]                                     ; 3       ;
-; g[15]                                     ; 3       ;
-; g[16]                                     ; 3       ;
-; g[17]                                     ; 3       ;
-; g[23]                                     ; 3       ;
-; g[24]                                     ; 3       ;
-; g[25]                                     ; 3       ;
-; g[26]                                     ; 3       ;
-; g[27]                                     ; 3       ;
-; g[28]                                     ; 3       ;
-; f[2]                                      ; 3       ;
-; f[3]                                      ; 3       ;
-; f[7]                                      ; 3       ;
-; f[11]                                     ; 3       ;
-; f[13]                                     ; 3       ;
-; f[14]                                     ; 3       ;
-; f[16]                                     ; 3       ;
-; f[18]                                     ; 3       ;
-; f[24]                                     ; 3       ;
-; f[25]                                     ; 3       ;
-; f[27]                                     ; 3       ;
-; f[28]                                     ; 3       ;
-; f[31]                                     ; 3       ;
-; e[0]                                      ; 6       ;
-; e[1]                                      ; 6       ;
-; e[2]                                      ; 6       ;
-; e[3]                                      ; 6       ;
-; e[4]                                      ; 6       ;
-; e[5]                                      ; 6       ;
-; e[6]                                      ; 6       ;
-; e[9]                                      ; 6       ;
-; e[12]                                     ; 6       ;
-; e[14]                                     ; 6       ;
-; e[17]                                     ; 6       ;
-; e[18]                                     ; 6       ;
-; e[19]                                     ; 6       ;
-; e[24]                                     ; 6       ;
-; e[28]                                     ; 6       ;
-; e[30]                                     ; 6       ;
-; b[0]                                      ; 3       ;
-; b[2]                                      ; 3       ;
-; b[7]                                      ; 3       ;
-; b[9]                                      ; 3       ;
-; b[10]                                     ; 3       ;
-; b[11]                                     ; 3       ;
-; b[13]                                     ; 3       ;
-; b[15]                                     ; 3       ;
-; b[16]                                     ; 3       ;
-; b[17]                                     ; 3       ;
-; b[18]                                     ; 3       ;
-; b[21]                                     ; 3       ;
-; b[22]                                     ; 3       ;
-; b[24]                                     ; 3       ;
-; b[25]                                     ; 3       ;
-; b[27]                                     ; 3       ;
-; b[28]                                     ; 3       ;
-; b[29]                                     ; 3       ;
-; b[31]                                     ; 3       ;
-; a[0]                                      ; 6       ;
-; a[1]                                      ; 6       ;
-; a[2]                                      ; 6       ;
-; a[5]                                      ; 6       ;
-; a[6]                                      ; 6       ;
-; a[9]                                      ; 6       ;
-; a[10]                                     ; 6       ;
-; a[13]                                     ; 6       ;
-; a[14]                                     ; 6       ;
-; a[15]                                     ; 6       ;
-; a[16]                                     ; 6       ;
-; a[19]                                     ; 6       ;
-; a[25]                                     ; 6       ;
-; a[27]                                     ; 6       ;
-; a[29]                                     ; 6       ;
-; a[30]                                     ; 6       ;
-; d[1]                                      ; 1       ;
-; d[3]                                      ; 1       ;
-; Total number of inverted registers = 136* ;         ;
+; a[0]                                      ; 7       ;
+; a[1]                                      ; 7       ;
+; a[2]                                      ; 7       ;
+; a[5]                                      ; 7       ;
+; a[6]                                      ; 7       ;
+; a[9]                                      ; 7       ;
+; a[10]                                     ; 7       ;
+; a[13]                                     ; 7       ;
+; a[14]                                     ; 7       ;
+; a[15]                                     ; 7       ;
+; a[16]                                     ; 7       ;
+; a[19]                                     ; 7       ;
+; a[25]                                     ; 7       ;
+; a[27]                                     ; 7       ;
+; a[29]                                     ; 7       ;
+; a[30]                                     ; 7       ;
+; b[0]                                      ; 4       ;
+; b[2]                                      ; 4       ;
+; b[7]                                      ; 4       ;
+; b[9]                                      ; 4       ;
+; b[10]                                     ; 4       ;
+; b[11]                                     ; 4       ;
+; b[13]                                     ; 4       ;
+; b[15]                                     ; 4       ;
+; b[16]                                     ; 4       ;
+; b[17]                                     ; 4       ;
+; b[18]                                     ; 4       ;
+; b[21]                                     ; 4       ;
+; b[22]                                     ; 4       ;
+; b[24]                                     ; 4       ;
+; b[25]                                     ; 4       ;
+; b[27]                                     ; 4       ;
+; b[28]                                     ; 4       ;
+; b[29]                                     ; 4       ;
+; b[31]                                     ; 4       ;
+; Hdigest[0]                                ; 2       ;
+; Hdigest[3]                                ; 2       ;
+; Hdigest[4]                                ; 2       ;
+; Hdigest[8]                                ; 2       ;
+; Hdigest[10]                               ; 2       ;
+; Hdigest[11]                               ; 2       ;
+; Hdigest[14]                               ; 2       ;
+; Hdigest[15]                               ; 2       ;
+; Hdigest[21]                               ; 2       ;
+; Hdigest[22]                               ; 2       ;
+; Hdigest[23]                               ; 2       ;
+; Hdigest[24]                               ; 2       ;
+; Hdigest[25]                               ; 2       ;
+; Hdigest[27]                               ; 2       ;
+; Hdigest[28]                               ; 2       ;
+; Hdigest[30]                               ; 2       ;
+; Hdigest[32]                               ; 2       ;
+; Hdigest[33]                               ; 2       ;
+; Hdigest[35]                               ; 2       ;
+; Hdigest[37]                               ; 2       ;
+; Hdigest[39]                               ; 2       ;
+; Hdigest[40]                               ; 2       ;
+; Hdigest[43]                               ; 2       ;
+; Hdigest[44]                               ; 2       ;
+; Hdigest[46]                               ; 2       ;
+; Hdigest[47]                               ; 2       ;
+; Hdigest[48]                               ; 2       ;
+; Hdigest[49]                               ; 2       ;
+; Hdigest[55]                               ; 2       ;
+; Hdigest[56]                               ; 2       ;
+; Hdigest[57]                               ; 2       ;
+; Hdigest[58]                               ; 2       ;
+; Hdigest[59]                               ; 2       ;
+; Hdigest[60]                               ; 2       ;
+; Hdigest[66]                               ; 2       ;
+; Hdigest[67]                               ; 2       ;
+; Hdigest[71]                               ; 2       ;
+; Hdigest[75]                               ; 2       ;
+; Hdigest[77]                               ; 2       ;
+; Hdigest[78]                               ; 2       ;
+; Hdigest[80]                               ; 2       ;
+; Hdigest[82]                               ; 2       ;
+; Hdigest[88]                               ; 2       ;
+; Hdigest[89]                               ; 2       ;
+; Hdigest[91]                               ; 2       ;
+; Hdigest[92]                               ; 2       ;
+; Hdigest[95]                               ; 2       ;
+; Hdigest[96]                               ; 2       ;
+; Hdigest[97]                               ; 2       ;
+; Hdigest[98]                               ; 2       ;
+; Hdigest[99]                               ; 2       ;
+; Hdigest[100]                              ; 2       ;
+; Hdigest[101]                              ; 2       ;
+; Hdigest[102]                              ; 2       ;
+; Hdigest[105]                              ; 2       ;
+; Hdigest[108]                              ; 2       ;
+; Hdigest[110]                              ; 2       ;
+; Hdigest[113]                              ; 2       ;
+; Hdigest[114]                              ; 2       ;
+; Hdigest[115]                              ; 2       ;
+; Hdigest[120]                              ; 2       ;
+; Hdigest[124]                              ; 2       ;
+; Hdigest[126]                              ; 2       ;
+; Hdigest[129]                              ; 2       ;
+; Hdigest[131]                              ; 2       ;
+; Total number of inverted registers = 272* ;         ;
 +-------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
@@ -398,145 +390,145 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |CompressionFunction|k[27]            ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[63][11] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[63][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[62][15] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[62][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[61][17] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[61][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[60][28] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[60][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[59][7]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[59][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[58][26] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[58][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[57][19] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[57][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[56][9]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[56][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[55][20] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[55][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[54][4]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[54][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[53][1]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[53][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[52][4]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[52][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[51][4]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[51][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[50][4]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[50][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[49][15] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[49][30] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[48][7]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[48][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[47][21] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[47][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[46][21] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[46][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[45][26] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[45][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[44][21] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[44][30] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[43][25] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[43][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[42][10] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[42][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[41][1]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[41][30] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[40][10] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[40][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[39][11] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[39][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[38][18] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[38][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[37][1]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[37][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[36][1]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[36][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[35][1]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[35][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[34][26] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[34][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[33][15] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[33][30] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[32][12] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[32][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[31][19] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[31][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[30][6]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[30][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[29][12] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[29][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[28][6]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[28][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[27][18] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[27][0]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[26][19] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[26][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[25][6]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[25][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[24][12] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[24][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[23][25] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[23][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[22][4]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[22][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[21][19] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[21][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[20][7]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[20][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[19][7]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[19][30] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[18][8]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[18][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[17][2]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[17][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[16][6]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[16][24] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[15][13] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[15][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[14][25] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[14][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[13][1]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[13][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[12][11] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[12][30] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[11][20] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[11][23] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[10][19] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[10][29] ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[9][12]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[9][24]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[8][12]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[8][0]   ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[7][9]   ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[7][23]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[6][16]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[6][30]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[5][25]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[5][29]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[4][1]   ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[4][29]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[3][15]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[3][24]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[2][7]   ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[2][30]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[1][27]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[1][24]  ;
-; 5:1                ; 27 bits   ; 81 LEs        ; 27 LEs               ; 54 LEs                 ; Yes        ; |CompressionFunction|schedule[0][26]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CompressionFunction|schedule[0][29]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |CompressionFunction|k[0]             ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[63][6]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[63][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[62][18] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[62][22] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[61][6]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[61][3]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[60][31] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[60][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[59][2]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[59][9]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[58][19] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[58][17] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[57][28] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[57][13] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[56][12] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[56][13] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[55][2]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[55][4]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[54][16] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[54][9]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[53][11] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[53][8]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[52][25] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[52][30] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[51][18] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[51][29] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[50][0]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[50][4]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[49][5]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[49][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[48][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[48][30] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[47][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[47][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[46][28] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[46][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[45][1]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[45][4]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[44][12] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[44][9]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[43][15] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[43][9]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[42][6]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[42][8]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[41][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[41][29] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[40][2]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[40][4]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[39][1]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[39][7]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[38][0]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[38][17] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[37][15] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[37][24] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[36][31] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[36][22] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[35][12] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[35][7]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[34][15] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[34][4]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[33][10] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[33][22] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[32][10] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[32][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[31][26] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[31][4]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[30][1]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[30][21] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[29][2]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[29][24] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[28][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[28][30] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[27][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[27][7]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[26][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[26][17] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[25][28] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[25][21] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[24][19] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[24][21] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[23][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[23][22] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[22][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[22][21] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[21][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[21][9]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[20][25] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[20][7]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[19][2]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[19][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[18][18] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[18][8]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[17][27] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[17][21] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[16][28] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[16][14] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[15][26] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[15][13] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[14][26] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[14][29] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[13][26] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[13][3]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[12][20] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[12][24] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[11][18] ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[11][9]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[10][0]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[10][22] ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[9][25]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[9][24]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[8][2]   ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[8][8]   ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[7][16]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[7][3]   ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[6][5]   ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[6][3]   ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[5][10]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[5][17]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[4][26]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[4][29]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[3][23]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[3][3]   ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[2][11]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[2][29]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[1][25]  ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[1][22]  ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 19 LEs               ; 38 LEs                 ; Yes        ; |CompressionFunction|schedule[0][1]   ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 13 LEs               ; 26 LEs                 ; Yes        ; |CompressionFunction|schedule[0][24]  ;
+; 3:1                ; 256 bits  ; 512 LEs       ; 512 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux65            ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |CompressionFunction|current_state    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |CompressionFunction|Mux79            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |CompressionFunction|Mux60            ;
-; 5:1                ; 64 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux77            ;
-; 6:1                ; 128 bits  ; 512 LEs       ; 512 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux107           ;
-; 64:1               ; 32 bits   ; 1344 LEs      ; 1344 LEs             ; 0 LEs                  ; No         ; |CompressionFunction|Mux157           ;
-; 10:1               ; 32 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux94            ;
-; 20:1               ; 32 bits   ; 416 LEs       ; 416 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux101           ;
-; 20:1               ; 32 bits   ; 416 LEs       ; 416 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux91            ;
-; 36:1               ; 32 bits   ; 768 LEs       ; 768 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux3             ;
+; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux74            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |CompressionFunction|Mux83            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |CompressionFunction|Mux56            ;
+; 64:1               ; 32 bits   ; 1344 LEs      ; 1344 LEs             ; 0 LEs                  ; No         ; |CompressionFunction|Mux129           ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux72            ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux68            ;
+; 24:1               ; 32 bits   ; 512 LEs       ; 512 LEs              ; 0 LEs                  ; No         ; |CompressionFunction|Mux116           ;
+; 48:1               ; 32 bits   ; 1024 LEs      ; 1024 LEs             ; 0 LEs                  ; No         ; |CompressionFunction|Mux24            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
@@ -555,7 +547,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:29     ;
+; Top            ; 00:00:36     ;
 +----------------+--------------+
 
 
@@ -565,7 +557,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Wed Feb 20 11:23:04 2019
+    Info: Processing started: Tue Feb 26 19:40:23 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CompressionFunction -c CompressionFunction
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 0 entities, in source file sha256_msfunctions.vhd
@@ -582,38 +574,33 @@ Info (12021): Found 2 design units, including 1 entities, in source file paddedm
     Info (12022): Found design unit 1: PaddedMessageRegFile-Behavioral
     Info (12023): Found entity 1: PaddedMessageRegFile
 Info (12127): Elaborating entity "CompressionFunction" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(173): signal "schedule" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(174): signal "schedule" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(175): signal "schedule" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(176): signal "schedule" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(177): signal "compressed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(178): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10540): VHDL Signal Declaration warning at CompressionFunction.vhd(52): used explicit default value for signal "gateval1" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at CompressionFunction.vhd(53): used explicit default value for signal "gateval2" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(182): signal "a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(183): signal "b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(184): signal "schedule" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(185): signal "schedule" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(186): signal "compressed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(187): signal "T1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CompressionFunction.vhd(188): signal "k" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "PaddedMessageRegFile" for hierarchy "PaddedMessageRegFile:paddedmessage"
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "PaddedMessageRegFile:paddedmessage|registers" is uninferred due to inappropriate RAM size
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "outmem[0]" is stuck at GND
     Warning (13410): Pin "outmem[1]" is stuck at GND
     Warning (13410): Pin "outmem[2]" is stuck at GND
-    Warning (13410): Pin "outmem[3]" is stuck at GND
-    Warning (13410): Pin "outmem[4]" is stuck at GND
     Warning (13410): Pin "outmem[5]" is stuck at GND
     Warning (13410): Pin "outmem[6]" is stuck at GND
-    Warning (13410): Pin "outmem[7]" is stuck at GND
-    Warning (13410): Pin "outmem[8]" is stuck at GND
-    Warning (13410): Pin "outmem[9]" is stuck at GND
     Warning (13410): Pin "outmem[10]" is stuck at GND
     Warning (13410): Pin "outmem[11]" is stuck at GND
     Warning (13410): Pin "outmem[12]" is stuck at GND
-    Warning (13410): Pin "outmem[13]" is stuck at GND
-    Warning (13410): Pin "outmem[14]" is stuck at GND
     Warning (13410): Pin "outmem[15]" is stuck at GND
     Warning (13410): Pin "outmem[16]" is stuck at GND
-    Warning (13410): Pin "outmem[17]" is stuck at GND
     Warning (13410): Pin "outmem[18]" is stuck at GND
     Warning (13410): Pin "outmem[19]" is stuck at GND
     Warning (13410): Pin "outmem[20]" is stuck at GND
-    Warning (13410): Pin "outmem[21]" is stuck at GND
-    Warning (13410): Pin "outmem[22]" is stuck at GND
+    Warning (13410): Pin "outmem[23]" is stuck at GND
     Warning (13410): Pin "outmem[25]" is stuck at GND
     Warning (13410): Pin "outmem[26]" is stuck at GND
     Warning (13410): Pin "outmem[27]" is stuck at GND
@@ -621,14 +608,14 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "outmem[31]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 8901 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 9165 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 454 output pins
-    Info (21061): Implemented 8444 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info (21059): Implemented 461 output pins
+    Info (21061): Implemented 8701 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
     Info: Peak virtual memory: 528 megabytes
-    Info: Processing ended: Wed Feb 20 11:23:40 2019
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Processing ended: Tue Feb 26 19:41:05 2019
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:41
 
 

@@ -1,5 +1,5 @@
 Assembler report for CompressionFunction
-Thu Feb 14 17:54:25 2019
+Fri Feb 22 15:31:10 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Thu Feb 14 17:54:25 2019 ;
+; Assembler Status      ; Successful - Fri Feb 22 15:31:10 2019 ;
 ; Revision Name         ; CompressionFunction                   ;
 ; Top-level Entity Name ; CompressionFunction                   ;
 ; Family                ; Cyclone II                            ;
@@ -81,13 +81,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Feb 14 17:54:25 2019
+    Info: Processing started: Fri Feb 22 15:31:09 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off CompressionFunction -c CompressionFunction
 Warning (292011): Can't generate programming files because you are currently using the Quartus II software in Evaluation Mode
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 413 megabytes
-    Info: Processing ended: Thu Feb 14 17:54:25 2019
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 418 megabytes
+    Info: Processing ended: Fri Feb 22 15:31:10 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

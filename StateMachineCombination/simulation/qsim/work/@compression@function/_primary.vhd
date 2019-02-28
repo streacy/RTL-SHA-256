@@ -7,6 +7,7 @@ entity CompressionFunction is
         blockSet        : in     vl_logic;
         compressdone    : out    vl_logic;
         readyBlock      : out    vl_logic;
+        kval            : out    vl_logic_vector(6 downto 0);
         digest          : out    vl_logic_vector(255 downto 0);
         sched           : out    vl_logic_vector(31 downto 0);
         sched1          : out    vl_logic_vector(31 downto 0);

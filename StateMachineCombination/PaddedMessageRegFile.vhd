@@ -23,8 +23,8 @@ end PaddedMessageRegFile;
 architecture Behavioral of PaddedMessageRegFile is
 	type registerFile is array(0 to 15) of std_logic_vector(31 downto 0);
 	signal registers : registerFile := (
-			x"61800000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000",
-			x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000001"
+			x"61626380", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000",
+			x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000018"
 		);
 	
 begin

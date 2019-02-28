@@ -14,6 +14,10 @@ package sha256_msfunctions is
 	-- Big Sigma Functions
 	function Z0(x : std_logic_vector) return std_logic_vector;
 	function Z1(x : std_logic_vector) return std_logic_vector;
+	
+	--Mathematical 
+	function ch(x, y, z : std_logic_vector) return std_logic_vector;
+	function maj(x, y, z : std_logic_vector) return std_logic_vector;
 
 end package sha256_msfunctions;
 
@@ -38,5 +42,15 @@ package body sha256_msfunctions is
 	begin
 		return std_logic_vector(rotate_right(unsigned(x), 6) xor rotate_right(unsigned(x), 11) xor rotate_right(unsigned(x), 25));
 	end function Z1;
+	
+	function ch(x, y, z : std_logic_vector) return std_logic_vector is
+	begin
+		return (x and y) xor ((not x) and z);
+	end function ch;
+
+	function maj(x, y, z : std_logic_vector) return std_logic_vector is
+	begin
+		return (x and y) xor (x and z) xor (y and z);
+	end function maj;
 	
 end package body sha256_msfunctions;

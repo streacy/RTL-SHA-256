@@ -23,9 +23,10 @@ end PaddedMessageRegFile;
 
 architecture Behavioral of PaddedMessageRegFile is
 	type registerFile is array(0 to 15) of std_logic_vector(31 downto 0);
+	signal addr_reg is std_logic_vector(3 downto 0);
 	signal registers : registerFile := (
 			x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000",
-			x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000001"
+			x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000"
 		);
 	
 begin
@@ -36,6 +37,7 @@ begin
 			if wen ='1' then
 			registers(to_integer(unsigned(addr))) <= dataIn;
 			end if;
+			 addr_reg <= addr;
 		end if;
 	end process;	
 			dataOut <= registers(to_integer(unsigned(addr)));

@@ -5,6 +5,7 @@ entity CompressionFunction_vlg_check_tst is
         addrout         : in     vl_logic_vector(3 downto 0);
         compressdone    : in     vl_logic;
         digest          : in     vl_logic_vector(255 downto 0);
+        kval            : in     vl_logic_vector(6 downto 0);
         outmem          : in     vl_logic_vector(31 downto 0);
         readyBlock      : in     vl_logic;
         sched           : in     vl_logic_vector(31 downto 0);
