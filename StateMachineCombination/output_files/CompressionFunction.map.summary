@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Feb 26 19:41:04 2019
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Analysis & Synthesis Status : Successful - Tue Mar 12 13:33:17 2019
+Quartus II 32-bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
 Revision Name : CompressionFunction
 Top-level Entity Name : CompressionFunction
 Family : Cyclone II
-Total logic elements : 8,667
-    Total combinational functions : 6,409
-    Dedicated logic registers : 3,049
-Total registers : 3049
-Total pins : 464
+Total logic elements : 8,626
+    Total combinational functions : 6,380
+    Dedicated logic registers : 3,033
+Total registers : 3033
+Total pins : 1,101
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
