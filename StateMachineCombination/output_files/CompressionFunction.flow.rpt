@@ -1,5 +1,5 @@
 Flow report for CompressionFunction
-Tue Feb 26 20:04:25 2019
+Thu Feb 28 14:00:44 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Tue Feb 26 20:04:25 2019            ;
+; Flow Status                        ; Successful - Thu Feb 28 14:00:44 2019            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; CompressionFunction                              ;
 ; Top-level Entity Name              ; CompressionFunction                              ;
@@ -98,7 +98,11 @@ applicable agreement for further details.
 ; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 411 MB              ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 395 MB              ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 411 MB              ; 00:00:04                           ;
-; Total                ; 00:00:53     ; --                      ; --                  ; 00:00:52                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 395 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 411 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 395 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 411 MB              ; 00:00:04                           ;
+; Total                ; 00:01:07     ; --                      ; --                  ; 00:01:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,6 +116,10 @@ applicable agreement for further details.
 ; EDA Netlist Writer   ; BriangPC         ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; BriangPC         ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; BriangPC         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; BriangPC         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; BriangPC         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; BriangPC         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; BriangPC         ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -119,6 +127,10 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off CompressionFunction -c CompressionFunction
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompressionFunction -c CompressionFunction --vector_source=C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/messagesched3.vwf --testbench_file=./simulation/qsim/CompressionFunction.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog CompressionFunction -c CompressionFunction
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompressionFunction -c CompressionFunction --vector_source=C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/messagesched3.vwf --testbench_file=./simulation/qsim/CompressionFunction.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog CompressionFunction -c CompressionFunction
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompressionFunction -c CompressionFunction --vector_source=C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/messagesched3.vwf --testbench_file=./simulation/qsim/CompressionFunction.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog CompressionFunction -c CompressionFunction
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompressionFunction -c CompressionFunction --vector_source=C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/messagesched3.vwf --testbench_file=./simulation/qsim/CompressionFunction.vt
