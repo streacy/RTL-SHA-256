@@ -61,5 +61,8 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_s
 set_global_assignment -name VECTOR_WAVEFORM_FILE messagesched2.vwf
 set_global_assignment -name VHDL_FILE PaddedMessageRegFile.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE messagesched3.vwf
+set_global_assignment -name VHDL_FILE sha256_Pfunctions.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/stephanietreacy/Desktop/RTL-SHA-256/StateMachineCombination/Waveform6.vwf"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Brian/Desktop/Capstone/Gitrepo/RTL-SHA-256/StateMachineCombination/messagesched3.vwf"

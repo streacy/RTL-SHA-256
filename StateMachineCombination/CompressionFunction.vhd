@@ -5,14 +5,15 @@ use ieee.numeric_std.all;
 use work.sha256_datatypes.all;
 use work.sha256_constants.all;
 use work.sha256_msfunctions.all;
+use work.sha256_Pfunctions.all;
 
 entity CompressionFunction is
 port(
       clock 		: in std_logic;
-		lastBlock   : in std_logic;
-		blockSet 	: in std_logic;
 		compressdone : out std_logic;
-		readyBlock   :out std_logic;
+		n,l : out integer;
+		mes:out std_logic_vector(0 to 511);
+		len:out std_logic_vector(0 to 63);
 		kval 			: out std_logic_vector(6 downto 0);
       digest 		: out std_logic_vector( 255 downto 0);
 		sched 		: out std_logic_vector(31 downto 0);
@@ -52,38 +53,52 @@ architecture behaviour of CompressionFunction is
   signal gateval1 : std_logic_vector(6 downto 0) := "1000000";
   signal gateval2 : std_logic_vector(6 downto 0) := "0010000";
   
+  --PreProcessor Funciton Signals
+	constant ss : string :="abc";
+	signal output:std_logic_vector(0 to ss'length*8 +(447- ss'length*8) mod 512+64);
+	signal message:std_logic_vector(0 to 511);
+	signal messageLength : std_LOGIC_VECTOR(0 to 63);
+	signal len_unsigned,k0 : unsigned(0 to 63):=to_unsigned(0,64);
+	signal nBlocks,x:integer:=0;
+	signal lastBlock   : std_logic:='0';
+	signal blockSet 	: std_logic;
+	signal readyBlock   : std_logic:='1';
+	type sb is array(0 to 15) of std_logic_vector(31 downto 0);
+	signal SubBlock: sb;
+  
   --FSM Signals
 		type states is(
 --	Idle,
-	Ready,
+	PreProcessor,
+--	Ready,
 	ScheduleMessage,
 	CompressBlock,
 	Append
 );
-	signal current_state : states:=Ready;
+	signal current_state : states:=PreProcessor;
 	
-	COMPONENT PaddedMessageRegFile IS
-	PORT
-	(clk : in  STD_LOGIC;
-    wen : in  STD_LOGIC;
-    addr : in  STD_LOGIC_VECTOR (3 downto 0);
-    dataIn : in  STD_LOGIC_VECTOR (31 downto 0);
-    dataOut : out  STD_LOGIC_VECTOR (31 downto 0)
-	);
-	END COMPONENT;
+--	COMPONENT PaddedMessageRegFile IS
+--	PORT
+--	(clk : in  STD_LOGIC;
+--    wen : in  STD_LOGIC;
+--    addr : in  STD_LOGIC_VECTOR (3 downto 0);
+--    dataIn : in  STD_LOGIC_VECTOR (31 downto 0);
+--    dataOut : out  STD_LOGIC_VECTOR (31 downto 0)
+--	);
+--	END COMPONENT;
 
 
 	
 begin
 
-	paddedmessage : PaddedMessageRegFile
-	PORT MAP(
-			clk => clock ,
-			wen => '0',
-			addr => memaddr,
-			dataIn	=> x"00000000",
-			dataOut	=> memout
-	);
+--	paddedmessage : PaddedMessageRegFile
+--	PORT MAP(
+--			clk => clock ,
+--			wen => '0',
+--			addr => memaddr,
+--			dataIn	=> x"00000000",
+--			dataOut	=> memout
+--	);
 
 
 	
@@ -97,22 +112,55 @@ process(clock,lastBlock, blockSet)
 		--		j<="0000000";
 		--		current_state<=Idle;
 		
-			when Ready =>
-				readyBlock <= '1';
-				if (blockSet='1') then
-					current_state<=ScheduleMessage;
-				else
-					current_state<=Ready;
+		when PreProcessor =>
+		if (lastBlock='1')then
+			current_state<=PreProcessor;
+		else
+			if (readyBlock='1') then
+				nBlocks<= output'length/512;			
+				if(nBlocks /= 0)then
+						x<=1;
 				end if;
+				len_unsigned<=shift_left(to_unsigned(ss'length,64),3);
+				messageLength<=std_logic_vector(len_unsigned);
+				k0<=numZeros(len_unsigned,k0);
+				message<=setBlock(output,message,x);
+				L1:for i in 0 to 15 loop
+					L2:for j in  31 downto 0 loop
+						SubBlock(i)<=message(i*32 to (i*32)+31);
+					end loop L2;
+				end loop L1;
+				if(x=(nBlocks))then
+						lastBlock<='1';
+				else
+					lastBlock<='0';
+				end if;
+			elsif(readyBlock='0')then
+					message<=setBlock(output,message,x);
+					L3:for i in 0 to 15 loop
+						L4:for j in  31 downto 0 loop
+							SubBlock(i)<=message(i*32 to (i*32)+31);
+						end loop L4;
+					end loop L3;
+				if(x=(nBlocks))then
+						lastBlock<='1';
+				else
+					lastBlock<='0';
+				end if;	
+			end if;
+			current_state<=ScheduleMessage;
+		end if;
+	
 			
 			when ScheduleMessage =>
 					readyBlock <= '0';					
 					if k < gateval2 then					-- If k < 16 then the message scheduler is the padded input message
-						outmem <=memout;
-						addrout <= memaddr;
+--						outmem <=memout;
+--						addrout <= memaddr;
+						outmem<=SubBlock(to_integer(unsigned(k)));
 						schedule(to_integer(unsigned(k))) <= memout;
 						k <= std_logic_vector(unsigned(k) + 1);
-						memaddr <= std_logic_vector(unsigned(memaddr) + 1);
+--						memaddr <= std_logic_vector(unsigned(memaddr) + 1);
 					elsif(k < gateval1) then									-- Else, W_k = s1(W[k]-2) + W[k]-7 + s0(W[k]-15) + W[k]-16
 						schedule(to_integer(unsigned(k))) <= std_logic_vector(unsigned(s1(schedule(to_integer(unsigned(k)) - 2))) + unsigned(schedule(to_integer(unsigned(k)) - 7)) + unsigned(s0(schedule(to_integer(unsigned(k)) - 15))) + unsigned(schedule(to_integer(unsigned(k)) - 16)));
 						k <= std_logic_vector(unsigned(k) + 1);
@@ -158,7 +206,7 @@ process(clock,lastBlock, blockSet)
 						  if (lastBlock = '1') then
 								current_state<=Append;
 						  else
-								current_state<=Ready;
+								current_state<=PreProcessor;
 						  end if;
 								
 				when Append =>
@@ -173,12 +221,15 @@ process(clock,lastBlock, blockSet)
 					digest( 223 downto 192 ) <= Hdigest( 223 downto 192 );
 					digest( 255 downto 224 ) <= Hdigest( 255 downto 224 );
 					
-					current_state<=Ready;
+					
+					current_state<=PreProcessor;
 									
 						
 	end case;
 end if;
-
+	n<=nBlocks;
+	mes<=output;
+	len<=messageLength;
 	sched <= a ;--schedule(0);
 	sched1 <= b; --schedule(1);
 	sched32 <= schedule(32);
